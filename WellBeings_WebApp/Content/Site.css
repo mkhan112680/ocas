@@ -75,3 +75,7 @@ textarea {
         background-color: none !important;
     }
 }
+
+.full-height {
+    height: calc(100vh - 200px ) !important;
+}

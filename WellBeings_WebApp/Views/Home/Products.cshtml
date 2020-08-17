@@ -2,14 +2,16 @@
     ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row">
-    <div class="col-sm-12 text-center ">
-        <input id="txt-product-search" type="text" class="k-textbox" placeholder="Search Products..." />
+<div class="full-height ">
+    <div class="row">
+        <div class="col-sm-12 text-center ">
+            <input id="txt-product-search" type="text" class="k-textbox" placeholder="Search Products..." />
+        </div>
     </div>
-</div>
-<div class="demo-section k-content wide">
-    <div id="listView"></div>
-    <div id="pager" class="k-pager-wrap"></div>
+    <div class="demo-section k-content wide">
+        <div id="listView"></div>
+        <div id="pager" class="k-pager-wrap"></div>
+    </div>
 </div>
 <script type="text/x-kendo-template" id="template">
     <div class="product">
