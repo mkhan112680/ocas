@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .sidebar {
+        opacity: .6;
+        position: absolute;
+        width: 600px;
+        height: 350px;
+        left: 0px;
+        top: 35%;
+        background-image: url("../../Content/Images/overlay.png");
+    }
+    @@media screen and (max-width: 600px) {
+        .sidebar {
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: 300px 200px;
+        }
+    }
+</style>
+<div class="sidebar">
+</div>
+@section scripts{
+    <script>
+        SelectMenu('home');
+    </script>
+}

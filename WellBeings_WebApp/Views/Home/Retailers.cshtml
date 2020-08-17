@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Retailers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-sm-12 text-center ">
+        <input id="txt-retailer-search" type="text" class="k-textbox" placeholder="Search Retailers..." />
+    </div>
+</div>
+<div class="demo-section k-content wide">
+    <div id="listView"></div>
+    <div id="pager" class="k-pager-wrap"></div>
+</div>
+<script type="text/x-kendo-template" id="template">
+    <div class="retailer">
+        <img src="https://picsum.photos/200/#=RetailerID*10#" alt="#: RetailerName # image" />
+        <h3><b>#:RetailerName#</b></h3>
+        <p>#:kendo.toString(UnitPrice, "c")#</p>
+    </div>
+</script>
+@section scripts{
+    @Scripts.Render("~/bundles/retailers")
+}
+

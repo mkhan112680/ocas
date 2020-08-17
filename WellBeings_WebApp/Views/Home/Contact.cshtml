@@ -1,0 +1,47 @@
+﻿@model bool
+@{
+    ViewBag.Title = "Contact";
+}
+<div class="contact-clean">
+    <form class="hide" onsubmit="return false;" id="form-contact">
+        <h2 class="text-center">Contact us</h2>
+        <div class="form-group"><textarea class="form-control" id="message" placeholder="Message" rows="14"></textarea></div>
+        <div class="form-group"><button id="btn-contact-us" class="btn btn-primary" type="submit">send </button></div>
+    </form>
+    <div id="alert-div" class="alert alert-danger hide">Your message has been sent!</div>
+</div>
+@section scripts{
+    <script>
+        if (@Model.ToString().ToLower())
+        {
+            $("#alert-div").removeClass("hide");
+        }
+        else {
+            $("#form-contact").removeClass("hide");
+        }
+
+        $("#btn-contact-us").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '@Url.Action("SendMessage","Home")',
+                data: {
+                    message: $("#message").val()
+                },
+                success: function (data) {
+                    if (data.MessageSent) {
+                        $("#form-contact").addClass("hide");
+                        $("#alert-div").removeClass("hide");
+                    }
+                    else {
+                        $("#form-contact").removeClass("hide");
+                        $("#alert-div").addClass("hide");
+                    }
+                },
+                error: function (request, error) {
+                    
+                }
+            });
+        });
+        SelectMenu('contactus');
+    </script>
+}
