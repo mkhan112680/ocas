@@ -30,9 +30,10 @@ textarea {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
- 
+    background-size:100% 100%;
     font-family: 'Open Sans' Arial, Helvetica, sans-serif;
     font-size: 13px;
+   
 }
 .navbar-inverse{
     border-color:transparent;
@@ -78,5 +79,7 @@ textarea {
 
 .full-height {
     height: calc(100vh - 200px ) !important;
-    
+}
+.full-width {
+    width: calc(100vw - 50px ) !important;
 }

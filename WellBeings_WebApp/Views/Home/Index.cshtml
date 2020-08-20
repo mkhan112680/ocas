@@ -11,31 +11,35 @@
         top: 35%;
         background-image: url("../../Content/Images/overlay.png");
     }
-    @@media screen and (max-width: 600px) {
+    @@media screen and (max-width: 800px) {
         .sidebar {
             width: 100%;
             background-repeat: no-repeat;
             background-size: 300px 200px;
         }
+        .main-heading {
+            font-size: 50px !important;
+        }
     }
-
     .main-heading {
         /*position: absolute;*/
-        /*height: calc(100vh - 51px);*/
-        /*width: 100%;
-        top: 51px;
-        left: 0px;
-        margin: 0;*/
+        top:100px;
         height: 100%;
         font-size: 100px;
+        width: calc(100vw) !important;
+        color: white;
+        font-stretch: expanded;
     }
     .jumbotron{
         background-color:transparent;
     }
+     
 </style>
-<div class="full-height ">
-    <div class="jumbotron main-heading row">
-        BEING LIVING WELL +
+<div class="full-height full-width">
+    <div class="jumbotron2 main-heading  row"  >
+        <div class="col-sm-12">
+            BEING LIVING WELL +
+        </div>
     </div>
     <div class="sidebar">
     </div>
