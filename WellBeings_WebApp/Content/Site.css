@@ -83,3 +83,7 @@ textarea {
 .full-width {
     width: calc(100vw - 50px ) !important;
 }
+
+.top-margin-10{
+    margin-top:10px;
+}
